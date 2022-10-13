@@ -53,5 +53,6 @@ public class CategorieProduitController {
 		return categorieProduitService.updateCategorieProduit(categorieProduit);
 	}
 
+	// Commentaire de test 
 	
 }
