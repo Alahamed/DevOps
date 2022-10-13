@@ -55,6 +55,7 @@ public class StockRestController {
 		return stockService.updateStock(stock);
 	}
 
+	// commentaire 2
 	/*
 	 * Spring Scheduler : Comparer QteMin tolérée (à ne pa dépasser) avec
 	 * Quantité du stock et afficher sur console la liste des produits inférieur
