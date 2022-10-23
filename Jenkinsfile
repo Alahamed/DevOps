@@ -1,24 +1,32 @@
 pipeline {
   agent any 
+  tools {
+    maven 'M2_Home'
+    jdk 'JAVA-HOME'
+  }
   stages {
-    stage("build") {
+ 
+    stage("Mvn clean") {
       
       steps {
-        echo 'building the application ...'
+        echo 'cleaning the application ...'
+        sh "mvn clean"
       }
-     }
-     stage("test") {
+    }
+    stage("Mvn compile") {
       
       steps {
-        echo 'testing the application ...'
+        echo 'compiling the application ...'
+        sh "mvn compile"
       }
-     }
-     stage("deploy") {
+    }
+      stage("test statique sonar") {
       
       steps {
-        echo 'deploying the application ...'
+        echo 'sonar scanning the application ...'
+        sh "mvn sonar:sonar"
       }
-     }
+    }
   }
 } 
     
