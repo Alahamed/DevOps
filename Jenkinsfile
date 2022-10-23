@@ -17,7 +17,7 @@ pipeline {
       
       steps {
         echo 'compiling the application ...'
-        sh "mvn compile"
+        sh "mvn compiler:compile"
       }
     }
       stage("test statique sonar") {
