@@ -22,8 +22,8 @@ pipeline {
     }
       stage("test statique sonar") {
       
-      steps {
-        echo 'sonar scanning the application ...'
+       steps {
+        WithSonarQubeEnv('sonarqube')
         sh "mvn sonar:sonar"
       }
     }
