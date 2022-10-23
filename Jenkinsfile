@@ -22,8 +22,7 @@ pipeline {
     }
       stage("test statique sonar") {
       
-       steps {
-        withEnv('sonarqube')
+        steps {
         sh "mvn sonar:sonar"
       }
     }
