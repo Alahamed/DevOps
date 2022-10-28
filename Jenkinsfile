@@ -1,9 +1,9 @@
 pipeline {
   agent any 
-  tools {
-    maven 'M2_Home'
-    jdk 'JAVA-HOME'
-  }
+ // tools {
+  //  maven 'M2_Home'
+ //   jdk 'JAVA-HOME'
+//  }
   stages {
  
     stage("Mvn clean") {
