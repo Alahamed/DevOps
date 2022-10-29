@@ -8,7 +8,13 @@ pipeline {
         git 'https://github.com/Alahamed/DevOps.git'
       }
     }
+    stage("Mvn clean") {
+      
+      steps {
+        echo 'cleaning the application ...'
+        sh "mvn clean"
+      }
+    }
    
   }
 } 
- 
