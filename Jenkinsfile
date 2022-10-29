@@ -22,6 +22,15 @@ pipeline {
         sh "mvn compiler:compile"
       }
     }
+    stage("test statique sonar") {
+      
+        steps {
+       mvn sonar:sonar \
+  -Dsonar.projectKey=sonarqube \
+  -Dsonar.host.url=http://192.168.178.62:9000 \
+  -Dsonar.login=8030651c4af26d69db0a08707e2dd3fc79426ad5
+      }
+    }
    
   }
 } 
