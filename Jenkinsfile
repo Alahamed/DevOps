@@ -1,24 +1,14 @@
 pipeline {
   agent any 
   stages {
-    stage("build") {
+    stage("Git") {
       
       steps {
-        echo 'building the application ...'
+        git url 'https://github.com/Alahamed/DevOps.git'
+ 
       }
      }
-     stage("test") {
-      
-      steps {
-        echo 'testing the application ...'
-      }
-     }
-     stage("deploy") {
-      
-      steps {
-        echo 'deploying the application ...'
-      }
-     }
+   
   }
 } 
     
