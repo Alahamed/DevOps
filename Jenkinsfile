@@ -8,14 +8,14 @@ pipeline {
         git 'https://github.com/Alahamed/DevOps.git'
       }
     }
-    stage("Mvn clean") {
+    stage("Maven clean") {
       
       steps {
         echo 'cleaning the application ...'
         sh "mvn clean"
       }
     }
-    stage("Mvn compile") {
+    stage("Maven compile") {
       
       steps {
         echo 'compiling the application ...'
