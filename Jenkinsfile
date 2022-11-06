@@ -31,6 +31,15 @@ pipeline {
   -Dsonar.login=0265b4b1f6c7d26ef4e4e19757469dc4874ebe70"
       }
     }
+    
+     stage("Tests Unitaire JUNIT") {
+      
+        steps {
+        echo 'Les tests unitaires mockito / junit'
+        sh "mvn test"
+      }
+    }
+   
    
   }
 } 
