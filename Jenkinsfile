@@ -27,13 +27,13 @@ pipeline {
         sh "mvn compiler:compile"
       }
     }
-    stage("test statique sonar") {
+     stage("test statique sonar") {
       
         steps {
         sh "mvn sonar:sonar \
   -Dsonar.projectKey=sonarqube \
   -Dsonar.host.url=http://192.168.178.62:9000 \
-  -Dsonar.login=a85931b0c78c165918938f6f036c43ea06eef6ec"
+  -Dsonar.login=9b6f969a807774fcf5f9d3050de74330368904cc"
       }
     }
 
@@ -44,7 +44,6 @@ pipeline {
       sh "mvn test" 
       }
       }
-
    
   }
 }
