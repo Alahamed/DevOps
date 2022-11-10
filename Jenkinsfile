@@ -1,16 +1,16 @@
 pipeline {
   agent any 
- // tools {
-  //  maven 'M2_Home'
- //   jdk 'JAVA-HOME'
-//  }
+  tools {
+    maven 'M2_Home'
+    jdk 'JAVA-HOME'
+  }
   stages {
 
-    stage("Git") {
+  stage("Git") {
       
       steps {
         echo 'cloning the application ...'
-        git 'https://github.com/Alahamed/DevOps.git'
+        git url 'https://github.com/Alahamed/DevOps.git'
       }
     }
     stage("Mvn clean") {
@@ -27,7 +27,7 @@ pipeline {
         sh "mvn compiler:compile"
       }
     }
-    stage("test statique sonar") {
+      stage("test statique sonar") {
       
         steps {
         sh "mvn sonar:sonar \
@@ -36,10 +36,12 @@ pipeline {
   -Dsonar.login=376fbe19b697dd70e21c5b75508b385ab70cf884"
       }
     }
-
- 
-
-   
+     stage("test Junit") {
+     
+     steps {
+     echo 'Tests Unitaires'
+      sh "mvn test" 
+      }
+      }
   }
 } 
-    
