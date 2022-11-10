@@ -10,7 +10,7 @@ pipeline {
       
       steps {
         echo 'cloning the application ...'
-        git url 'https://github.com/Alahamed/DevOps.git'
+        git  'https://github.com/Alahamed/DevOps.git'
       }
     }
     stage("Mvn clean") {
