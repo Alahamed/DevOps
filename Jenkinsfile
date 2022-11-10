@@ -37,7 +37,13 @@ pipeline {
       }
     }
 
- 
+ stage("test Junit") {
+     
+     steps {
+     echo 'Tests Unitaires'
+      sh "mvn test" 
+      }
+      }
 
    
   }
