@@ -33,7 +33,7 @@ pipeline {
         sh "mvn sonar:sonar \
   -Dsonar.projectKey=sonarqube \
   -Dsonar.host.url=http://192.168.1.10:9000 \
-  -Dsonar.login=376fbe19b697dd70e21c5b75508b385ab70cf884"
+  -Dsonar.login=6ee05e344776cf05d6bd2d43346e3c09ad608a85"
       }
     }
      stage("test Junit") {
