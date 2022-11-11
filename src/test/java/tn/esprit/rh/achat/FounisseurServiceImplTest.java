@@ -73,14 +73,14 @@ public class FounisseurServiceImplTest {
 	   Assertions.assertEquals("momento", Four.getLibelle());
 	}
 	
-	/*@Test
+	@Test
 	public void supprimerFournisseur()
 	{
 		Fournisseur ff = fSer.retrieveFournisseur((long) 1);
 		when(fRep.findById((long) 1)).thenReturn(Optional.of(ff));
 		fSer.deleteFournisseur((long) 1);
 		verify(fRep).save(ff);
-	}*/
+	}
 	
 	
 
