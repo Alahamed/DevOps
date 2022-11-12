@@ -5,7 +5,8 @@ pipeline {
       
       steps {
         echo 'cloning the application ...'
-        git 'https://github.com/Alahamed/DevOps.git'
+        git branch : "Ahmed" , 
+        url :'https://github.com/Alahamed/DevOps.git'
       }
     }
     stage("Maven clean") {
