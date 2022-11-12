@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.3</version>
+		<version>2.5.9</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>tn.esprit.rh</groupId>
@@ -26,7 +26,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+ 
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -42,6 +42,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -61,6 +62,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.4.1</version><!--$NO-MVN-MAN-VER$-->
 				<configuration>
 					<excludes>
 						<exclude>
@@ -70,7 +72,15 @@
 					</excludes>
 				</configuration>
 			</plugin>
+
+			<plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-resources-plugin</artifactId>
+			  <version>3.1.0</version><!--$NO-MVN-MAN-VER$-->
+		    </plugin>
+
 		</plugins>
 	</build>
-
+	
+      
 </project>
