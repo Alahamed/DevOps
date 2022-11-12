@@ -16,7 +16,6 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
-    <jenkins.e2eTests.reportsDirectory>target/protractor-reports</jenkins.e2eTests.reportsDirectory>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -74,7 +73,13 @@
 				</configuration>
 			</plugin>
 
-		
+			<plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-resources-plugin</artifactId>
+			  <version>3.1.0</version><!--$NO-MVN-MAN-VER$-->
+		    </plugin>
+		    
+		  
 
 
 		</plugins>
