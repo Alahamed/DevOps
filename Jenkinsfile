@@ -8,10 +8,13 @@ pipeline {
 
     stage("Git") {
       
-      steps {
-        echo 'cloning the application ...'
-        git 'https://github.com/Alahamed/DevOps.git'
-      }
+          
+         steps {
+                echo 'cloning project from GIT'
+                git branch : "khalil" , 
+                url :'https://github.com/Alahamed/DevOps.git'
+            }
+      
     }
     stage("Mvn clean") {
       
@@ -25,6 +28,14 @@ pipeline {
       steps {
         echo 'compiling the application ...'
         sh "mvn compiler:compile"
+      }
+    }
+    
+    stage("Mvn test") {
+      
+      steps {
+        echo 'testing the application ...'
+        sh "mvn test"
       }
     }
     stage("test statique sonar") {
