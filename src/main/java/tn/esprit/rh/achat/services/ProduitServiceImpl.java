@@ -14,6 +14,7 @@ import java.util.List;
 
 @Service
 @Slf4j
+@Transactional
 public class ProduitServiceImpl implements IProduitService {
 
 	@Autowired
