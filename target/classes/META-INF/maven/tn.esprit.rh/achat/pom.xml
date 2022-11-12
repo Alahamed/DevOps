@@ -55,31 +55,6 @@
 
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>2.4.1</version><!--$NO-MVN-MAN-VER$-->
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
 
-		</plugins>
-	</build>
-	
-       <distributionManagement>
-        <repository>
-         <id>deploymentRepo</id>
-         <name>admin</name>
-        <url>http://192.168.178.62:8081/repository/maven-releases/</url>
-       </repository>
-      </distributionManagement>
       
 </project>
