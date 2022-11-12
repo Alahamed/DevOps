@@ -7,21 +7,29 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.text.ParseException;
 import java.util.List;
-////
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import tn.esprit.rh.achat.entities.Produit;
+import tn.esprit.rh.achat.repositories.ProduitRepository;
 import tn.esprit.rh.achat.services.ProduitServiceImpl;
 
+@ExtendWith(MockitoExtension.class)
 @SpringBootTest
 @TestMethodOrder(OrderAnnotation.class)
  class ProduitServiceImplTest {
 
-	@Autowired
+	@InjectMocks
 	ProduitServiceImpl produitService;
+	
+	@Mock
+	ProduitRepository Repo;
+
 	
 	Produit prod= Produit.builder().codeProduit("123").libelleProduit("lait").build();
 	
