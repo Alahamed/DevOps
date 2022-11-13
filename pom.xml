@@ -93,7 +93,7 @@
         <repository>
          <id>deploymentRepo</id>
          <name>admin</name>
-        <url>http://192.168.178.62:8081/repository/maven-releases/</url>
+        <url>http://192.168.178.62:8081/repository/maven-snapshots/</url>
        </repository>
       </distributionManagement> 
       
