@@ -31,13 +31,7 @@ pipeline {
       }
     }
     
-    stage("Mvn test") {
-      
-      steps {
-        echo 'testing the application ...'
-        sh "mvn test"
-      }
-    }
+    
     stage("test statique sonar") {
       
         steps {
@@ -50,7 +44,13 @@ pipeline {
       }
     }
 
- 
+ stage("Mvn test") {
+      
+      steps {
+        echo 'testing the application ...'
+        sh "mvn test"
+      }
+    }
 
    
   }
