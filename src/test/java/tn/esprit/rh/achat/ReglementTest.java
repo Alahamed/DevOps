@@ -59,11 +59,11 @@ public class ReglementTest {
 //		Facture retrieveFacture(Long id);
 	    @Test
 	     void testRetrieveReglement() {
-	    	//Reglement reg= new Reglement() ;
-	        //Mockito.when(Repo.findById(Mockito.anyLong())).thenReturn(Optional.of(reg));
-	        //@SuppressWarnings("removal")
-	        //Reglement r1 = Service.retrieveReglement((long) 1);
-	        //Assertions.assertNotNull(r1);
+	    	Reglement reg= new Reglement() ;
+	        Mockito.when(Repo.findById(Mockito.anyLong())).thenReturn(Optional.of(reg));
+	        @SuppressWarnings("removal")
+	        Reglement r1 = Service.retrieveReglement((long) 1);
+	        Assertions.assertNotNull(r1);
 	    	int a=1 ;
 	    	int b=2 ;
 	    	int c= a+b ;
@@ -90,13 +90,11 @@ public class ReglementTest {
 	    //	Facture addFacture(Facture f);
 	    @Test
 	     void testAddReglement() {
-	    	///Reglement reg= new Reglement() ;
-	        //Mockito.when(Repo.save(reg)).thenReturn(reg);
-	        //Reglement s1 = Service.addReglement(reg);
-	        //Assertions.assertNotNull(s1);
-	    	int a=1 ;
-	    	int b=2 ;
-	    	int c= a+b ;
+	    	Reglement reg= new Reglement() ;
+	        Mockito.when(Repo.save(reg)).thenReturn(reg);
+	        Reglement s1 = Service.addReglement(reg);
+	        Assertions.assertNotNull(s1);
+	    	
 
 	    }
 	    
