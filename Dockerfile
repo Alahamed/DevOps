@@ -1,15 +1,4 @@
-FROM maven:latest
-
-ENV APP_HOME=/app/
-
-COPY pom.xml $APP_HOME
-COPY src $APP_HOME/src/
-WORKDIR $APP_HOME
-
-RUN mvn package -DskipTests
-ENV JAR_FILE=target/achat-0.0.1-SNAPSHOT.jar
-
-RUN mv ${JAR_FILE} /app.jar
-
+FROM openjdk:8-alpine
 EXPOSE 8089
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+ADD ./target/achat-1.0.jar test-docker.jar 
+ENTRYPOINT ["java","-jar","/test-docker.jar"]
