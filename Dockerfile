@@ -1,4 +1,5 @@
 FROM openjdk:8-alpine
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
 EXPOSE 8089
-ADD ./target/achat-1.0.jar test-docker.jar 
-ENTRYPOINT ["java","-jar","/test-docker.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
